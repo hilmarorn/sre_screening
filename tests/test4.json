@@ -1,0 +1,11 @@
+{
+    "service_id": "test_service_four",
+    "status": {
+        "healthy": false,
+        "message": "Service is Down!"
+    },
+    "events": {
+        "ok": 10,
+        "error": 100
+    }
+}

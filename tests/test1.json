@@ -1,0 +1,11 @@
+{
+    "service_id": "test_service_one",
+    "status": {
+        "healthy": true,
+        "message": "Everything is OK"
+    },
+    "events": {
+        "ok": 200,
+        "error": 2
+    }
+}
