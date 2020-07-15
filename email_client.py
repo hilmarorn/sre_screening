@@ -12,13 +12,16 @@ class SMTPClient(object):
         self.receivers = ['alerts@example.com']
 
     def send_email(self, sender, receivers, template):
+        sent_email = False
         print('Sending to email addresses: %s' % receivers)
         try:
             client = smtplib.SMTP(self.HOST, self.PORT)
             client.sendmail(sender, receivers, template)         
             print('Successfully sent email')
+            sent_email = True
         except SMTPException:
             print('Error: Unable to send email')
+        return sent_email
 
     def send_support_email(self, service):
         message = """From: Hilmar Hergeirsson <{}>
@@ -28,7 +31,7 @@ class SMTPClient(object):
             Message: {}
             Number of errors: {}
             """
-        self.send_email(
+        return self.send_email(
             self.sender,
             self.receivers,
             message.format(self.sender, self.receivers[0], service['service_id'], service['status']['message'], service['events']['error'])

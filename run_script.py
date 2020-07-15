@@ -17,7 +17,7 @@ def main():
     service = json.loads(input_json)
 
     print('Report data:', service)
-    read_latest_report(service, mail_client, tcp_client)
+    sent_email, sent_tcp = read_latest_report(service, mail_client, tcp_client)
     write_events_report(service)
 
 if __name__ == "__main__":
