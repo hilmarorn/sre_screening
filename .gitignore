@@ -1,0 +1,11 @@
+.DS_Store
+ve
+venv
+/static/
+media/
+*.py[co]
+build/
+dist/
+*.egg-info/
+db.sqlite3
+staticfiles/
