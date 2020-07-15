@@ -8,7 +8,7 @@ class TCPClient(object):
 
     def __init__(self):
         self.HOST = "127.0.0.1"
-        self.PORT = 5006
+        self.PORT = 5005
 
     def send_tcp_message(self, data):
         print('Sending tcp message to client {} with data {}'.format(self.HOST, data))

@@ -3,7 +3,7 @@
 
 import socketserver
 
-HOST, PORT = "127.0.0.1", 5006
+HOST, PORT = "127.0.0.1", 5005
 
 class TCPHandler(socketserver.BaseRequestHandler):
     """
