@@ -2,23 +2,23 @@
 
 Python 3.6.x - 3.7.6
 
-## Setup
+## Setup project
 
-Setup requirements
-```
-$ pip install -r requirements.txt
-```
-
-Setup TCP Server
+Start TCP Server
 ```
 $ python3 run_tcp_server.py
 ```
 
-## Running
+Start Mail Server
+```
+$ python3 -m smtpd -c DebuggingServer -n localhost:1025
+```
+
+## Run examples
 
 Run script
 ```
-$ python3 run_script.py
+$ python3 run_script.py < test/test1.json
 ```
 
 Run tests
